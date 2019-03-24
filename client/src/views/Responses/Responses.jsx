@@ -30,7 +30,7 @@ class Responses extends Component {
                     <CSVLink data={this.props.data}
                       style={{ float: 'right', margin: '25px' }}
                       className='btn btn-primary'
-                      filename={'data-innoscripta'}>Download Data</CSVLink>
+                      filename={'data-innoscripta.csv'}>Download Data</CSVLink>
                     <Table hover>
                       <thead>
                         <tr>
