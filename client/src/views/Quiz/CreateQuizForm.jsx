@@ -4,7 +4,7 @@ import {
   Row,
   Col
 } from 'react-bootstrap'
-import { Card } from 'components/Card/Card.jsx'
+import { Card } from './../../components/Card/Card.jsx'
 import { Formik } from 'formik'
 
 class CreateQuizForm extends Component {
