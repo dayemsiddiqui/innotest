@@ -15,6 +15,7 @@ class Question extends Component {
 
   handleChange (e) {
     this.setState({ answer: parseInt(e.target.value) })
+    this.props.submitAnswer({ answer: parseInt(e.target.value), questionId: this.props.question._id })
   }
 
   render () {

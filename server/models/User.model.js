@@ -2,10 +2,9 @@ const mongoose = require('mongoose')
 
 const UserSchema = new mongoose.Schema({
   name: String,
-  score: Number,
   answers: [
     {
-      id: Number,
+      questionId: String,
       answer: Number
     }
   ],

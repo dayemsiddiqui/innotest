@@ -1,6 +1,6 @@
 import Dashboard from 'views/Dashboard/Dashboard'
 import QuizList from 'views/Quiz/QuizList'
-import TableList from 'views/TableList/TableList'
+import Responses from 'views/Responses/Responses'
 import CreateQuiz from '../views/Quiz/CreateQuiz'
 
 const dashboardRoutes = [
@@ -20,7 +20,7 @@ const dashboardRoutes = [
     path: '/responses',
     name: 'Responses',
     icon: 'pe-7s-note2',
-    component: TableList
+    component: Responses
   },
   {
     path: '/createQuiz',

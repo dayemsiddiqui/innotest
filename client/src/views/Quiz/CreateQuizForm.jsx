@@ -36,14 +36,9 @@ class CreateQuizForm extends Component {
                         }
                         return errors
                       }}
-                      onSubmit={(values, { setSubmitting }) => {
+                      onSubmit={(values, { setSubmitting, resetForm }) => {
                         this.props.addQuestion(values)
-                        values = { title: '',
-                          score: 0,
-                          option1: '',
-                          option2: '',
-                          option3: '',
-                          answer: 0 }
+                        resetForm()
                         setTimeout(() => {
                           setSubmitting(false)
                         }, 400)

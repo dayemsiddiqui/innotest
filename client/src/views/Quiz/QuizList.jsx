@@ -13,6 +13,7 @@ import { fetchAllQuizes } from '../../thunks'
 import { Link } from 'react-router-dom'
 import { getQuizList } from './../../reducers'
 
+
 class QuizList extends Component {
   componentDidMount (props) {
     this.props.fetchAllQuizes()

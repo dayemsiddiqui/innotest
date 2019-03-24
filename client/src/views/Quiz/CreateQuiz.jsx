@@ -8,8 +8,10 @@ import { bindActionCreators } from 'redux'
 import { fetchAllQuizes, saveQuiz } from '../../thunks'
 import CreateQuizForm from './CreateQuizForm'
 import QuizPreview from './QuizPreview'
-import * as mutators from './../../mutators'
 import { Redirect } from 'react-router-dom'
+import { prepareDataForQuestionPreview, prepareQuizData } from './../../mutators'
+
+import { withAlert } from 'react-alert'
 
 class CreateQuiz extends Component {
   constructor (props) {
@@ -29,8 +31,14 @@ class CreateQuiz extends Component {
   }
 
   saveQuiz () {
+    if (this.state.title === '') {
+      return this.props.alert.error('Please add a quiz title')
+    }
+    if (this.state.questions.length <= 0) {
+      return this.props.alert.error('Please add atleast one question')
+    }
     this.props.saveQuiz(
-      mutators.prepareQuizData(this.state.questions, this.state.title)
+      prepareQuizData(this.state.questions, this.state.title)
     )
     this.setState({ redirect: true })
   }
@@ -64,7 +72,7 @@ class CreateQuiz extends Component {
             <h1 style={{ textAlign: 'center' }}>Preview</h1>
           </Row>
           <Row>
-            <QuizPreview questions={this.state.questions} />
+            <QuizPreview questions={prepareDataForQuestionPreview(this.state.questions)} />
           </Row>
         </Grid>
       </div>
@@ -80,4 +88,4 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => (bindActionCreators({ fetchAllQuizes, saveQuiz }, dispatch))
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateQuiz)
+export default connect(mapStateToProps, mapDispatchToProps)(withAlert()(CreateQuiz))
