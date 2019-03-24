@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from 'components/Header/Header'
-import Footer from 'components/Footer/Footer'
+import Header from './../../components/Header/Header'
+import Footer from './../../components/Footer/Footer'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { computeResult } from '../../thunks'
