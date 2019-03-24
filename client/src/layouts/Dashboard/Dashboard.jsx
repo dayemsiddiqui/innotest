@@ -5,7 +5,7 @@ import Header from './../../components/Header/Header'
 import Footer from './../../components/Footer/Footer'
 import Sidebar from './../../components/Sidebar/Sidebar'
 
-import dashboardRoutes from 'routes/dashboard.jsx'
+import dashboardRoutes from './../../routes/dashboard.jsx'
 
 class Dashboard extends Component {
   componentDidUpdate (e) {
