@@ -2,7 +2,7 @@ import axios from 'axios'
 import * as actions from './actions'
 import { calculateScore } from './reducers'
 
-const BASE_URL = 'http://localhost:3005/api/v1/'
+const BASE_URL = 'http://134.209.244.189:3005/api/v1/'
 export const fetchAllQuizes = () => {
   return (dispatch, getState) => {
     axios.get(`${BASE_URL}admin`)
