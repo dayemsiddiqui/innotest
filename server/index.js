@@ -6,7 +6,7 @@ const cors = require('cors')
 const config = require('./config')
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://mongodb/innoscripta')
+mongoose.connect('mongodb://localhost/innoscripta')
   .then(() => console.log('Connected to mongodb successfully'))
   .catch((err) => console.log('Failed to connect to mongodb', err))
 const app = express()
