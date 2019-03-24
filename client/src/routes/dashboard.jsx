@@ -1,6 +1,6 @@
-import Dashboard from 'views/Dashboard/Dashboard'
-import QuizList from 'views/Quiz/QuizList'
-import Responses from 'views/Responses/Responses'
+import Dashboard from '../views/Dashboard/Dashboard'
+import QuizList from '../views/Quiz/QuizList'
+import Responses from '../views/Responses/Responses'
 import CreateQuiz from '../views/Quiz/CreateQuiz'
 
 const dashboardRoutes = [
