@@ -5,8 +5,8 @@ import {
   Col,
   Table
 } from 'react-bootstrap'
-import Button from 'components/CustomButton/CustomButton'
-import { Card } from 'components/Card/Card.jsx'
+import Button from './../../components/CustomButton/CustomButton'
+import { Card } from './../../components/Card/Card.jsx'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchAllQuizes } from '../../thunks'
